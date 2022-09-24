@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>볓빛마루</title>
+    <title>별빛마루</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -27,7 +27,6 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">   
       $(document).ready( function() {
-      console.log("1")
       $("#header").load("common/header.html");  // 원하는 파일 경로를 삽입하면 된다
       $("#footer").load("common/footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
       
@@ -103,37 +102,34 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
-              <div class="slider-item">
-                <a href="images/room1/image1.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image1.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-              <div class="slider-item">
-                <a href="images/room1/image2.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image2.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-              <div class="slider-item">
-                <a href="images/room1/image3.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image3.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-              <div class="slider-item">
-                <a href="images/room1/image4.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image4.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-              <div class="slider-item">
-                <a href="images/room1/image5.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image5.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-              <div class="slider-item">
-                <a href="images/room1/image6.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image6.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-              <div class="slider-item">
-                <a href="images/room1/image8.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/room1/image8.jpeg" alt="Image placeholder" class="img-fluid"></a>
-              </div>
-         
-            </div>
+            <center>
+              <img style="width:80%;height:50%"  class="mySlides" src="images/room1/image1.jpeg">
+              <img  style="width:80%;height:50%" class="mySlides" src="images/room1/image2.jpeg">
+              <img style="width:80%;height:50%" class="mySlides" src="images/room1/image3.jpeg">
+              <img style="width:80%;height:50%" class="mySlides" src="images/room1/image4.jpeg">
+            </center>
             <!-- END slider -->
           </div>
         
         </div>
       </div>
     </section>
+<script>
+  var slideIndex = 0;
+carousel();
 
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 1000); // Change image every 2 seconds
+}
+</script>
     <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
         <div class="container" >
           <div class="row align-items-center">
